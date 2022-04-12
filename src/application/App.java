@@ -1,12 +1,12 @@
 package application;
 
-import main.*;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import main.File;
 import main.Image;
 
 public class App extends Application {
@@ -22,9 +22,9 @@ public class App extends Application {
         primaryStage.setScene(new Scene(vBox, 640, 360));
         primaryStage.setTitle("Test");
         primaryStage.show();
-        File b= new File("image/1.jpg");
+        File b = new File("image/1.jpg");
 
-        Image a =new Image(b.getAbsolutePath());
+        Image a = new Image(b.getAbsolutePath());
         System.out.println(a.getUrl());
     }
 }

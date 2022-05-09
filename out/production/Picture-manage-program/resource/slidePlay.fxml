@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.stage.*?>
+
+<Stage fx:id="rootStage" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slidePlay.SlidePlayController">
+   <scene>
+      <Scene>
+         <root>
+            <StackPane fx:id="rootPane">
+               <children>
+                  <ImageView fx:id="slide" fitHeight="400.0" fitWidth="600.0" nodeOrientation="INHERIT" onContextMenuRequested="#menuClick" onKeyPressed="#keyPress" onMouseClicked="#mouseClick" onScroll="#mouseScroll" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER" />
+                  <Label fx:id="tip" alignment="CENTER" prefHeight="15.0" prefWidth="150.0" text="放映结束，点击鼠标退出" textAlignment="CENTER" textFill="RED" wrapText="true" StackPane.alignment="TOP_CENTER" />
+               </children>
+            </StackPane>
+         </root>
+      </Scene>
+   </scene>
+</Stage>

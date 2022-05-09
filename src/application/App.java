@@ -1,13 +1,8 @@
 package application;
 
+import MainUI.MainUI;
 import javafx.application.Application;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import main.File;
-import main.Image;
 
 public class App extends Application {
     public static void main(String[] args) {
@@ -16,15 +11,29 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Button btn = new Button("按钮A using JDK-" + System.getProperty("java.version"));
+/*        Button btn = new Button("播放幻灯片");
         VBox vBox = new VBox(btn);
         vBox.setAlignment(Pos.CENTER);
+        PlayList list = new PlayList();
+        for (int i = 0; i <= 5; i++) {
+            String url = "F:\\javaFX\\Picture-manage-program\\image\\" + i + ".jpg";
+            Image t = new Image(url);
+            list.addPlayList(t);
+        }
+        btn.setOnAction(e -> {
+            ViewImageStage sp = new ViewImageStage();
+            try {
+                primaryStage.close();
+                sp.start(list);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
         primaryStage.setScene(new Scene(vBox, 640, 360));
         primaryStage.setTitle("Test");
-        primaryStage.show();
-        File b = new File("image/1.jpg");
+        primaryStage.show();*/
 
-        Image a = new Image(b.getAbsolutePath());
-        System.out.println(a.getUrl());
+        MainUI x= new MainUI();
+        x.start(primaryStage);
     }
 }
